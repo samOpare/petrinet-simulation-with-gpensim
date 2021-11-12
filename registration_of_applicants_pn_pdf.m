@@ -1,0 +1,13 @@
+function[png] = registration_of_applicants_pn_pdf()
+% define the petri net name
+png.PN_name = 'Social Assistance Applicant Registration';
+% define the st of places 
+png.set_of_Ps = {'pR1','pR2','pR3','pR4','pR5','pR6'};
+% define the set of transitions
+png.set_of_Ts = {'tR_1','tR_2','tR_3','tR_4','tR_5', ...
+    'tR_6','tR_7','tR_O'};
+% define the arcs
+png.set_of_As = {'pR1','tR_1',1,'tR_1','pR2',1,...
+'pR2','tR_3',1,'tR_3','pR1',1,'pR2','tR_2',1,'tR_2','pR3',1,...
+'pR3','tR_4',1,'tR_4','pR5',1,'pR5','tR_7',1,'pR3','tR_5',1,'tR_5','pR4',1,...
+'pR4','tR_6',1,'tR_6','pR6',1,'pR6','tR_7',1,'pR4','tR_O',1};
